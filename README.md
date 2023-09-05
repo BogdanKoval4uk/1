@@ -11,7 +11,7 @@
 #### Задание№1
 Выведите на консоль минимальные и максимальные значения для предопределенных типов данных CTS.
 
-#### Выполнение задние номер 1
+####№ Выполнение задние номер 1
 
     using System;    //включаем работу с консолью
 
@@ -67,6 +67,65 @@
 Создайте два private метода, вычисляющие площадь прямоугольника - double CalculateArea() и периметр прямоугольника - double CalculatePerimeter ().
 Создайте два свойства double Area и double Perimeter с одним методом доступа get, вызывающим созданные ранее методы.
 Напишите программу, которая принимает от пользователя длины двух сторон прямоугольника и выводит на экран периметр и площадь. Покройте тестами методы класса Rectangle.
+
+##### Выполнения задания номер 2
+
+     using System;
+
+     namespace LABA1C__2._0
+        {
+        class Rectangle
+        {
+            private double side1;
+            private double side2;
+
+            public Rectangle(double sideA, double sideB)
+            {
+                side1 = sideA;
+                side2 = sideB;
+            }
+
+            private double CalculateArea()
+            {
+                return side1 * side2;
+            }
+
+            private double CalculatePerimeter()
+            {
+                return 2 * (side1 + side2);
+            }
+
+            public double Area
+            {
+                 get {  return CalculateArea(); }                 //get - метод, который возвращает значение свойства
+            }
+
+            public double Perimeter
+            {
+                get { return CalculatePerimeter(); }
+            }
+        }
+        class Program
+        {
+            static void Main()
+            {
+                Console.WriteLine("Введите длину первой стороны прямоугольника:");
+                double sideA = double.Parse(Console.ReadLine());           //parse - конвертация из строки в double
+
+                Console.WriteLine("Введите длину второй стороны прямоугольника:");
+                double sideB = double.Parse(Console.ReadLine()); 
+
+                Rectangle rectangle = new Rectangle(sideA, sideB);
+
+                Console.WriteLine($"Площадь прямоугольника: {rectangle.Area}");
+                Console.WriteLine($"Периметр прямоугольника: {rectangle.Perimeter}");
+
+                Console.ReadKey();
+            }
+        }
+    }
+##### Вывод консоли
+
 
 #### Задание №3
 Создайте классы Point и Figure.
