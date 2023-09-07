@@ -223,5 +223,5 @@ using System;
         }
     }
 ***** Вывод консоли
-![image]()
+![image](https://github.com/BogdanKoval4uk/1/blob/main/Снимок%20экрана%202023-09-07%20144049.png)
 
